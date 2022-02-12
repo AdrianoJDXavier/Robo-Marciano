@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Robo Marciano</string>
     <string name="title_view">Olá, eu sou o Robô Marciano\nVocê pode me perguntar qualquer coisa.\nDigite a sua mensagem abaixo:</string>
+    <string name="title_calc">Faça aqui seus calculos</string>
+    <string name="voltar">Voltar</string>
+    <string name="_1_n_mero">1° Número</string>
+    <string name="_2_n_mero">2° Número</string>
+    <string name="calcular">Calcular</string>
+    <string name="msg_error">Preencha os campos vazios!</string>
 </resources>
