@@ -20,13 +20,21 @@ public class activity_calc extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
-
+        List<String> lista = null;
+        Intent intent = getIntent();
+        if(intent != null){
+            Bundle params = intent.getExtras();
+            if(params != null){
+                lista = params.getStringArrayList("array");
+            }
+        }
 
         String[] tipo = Spinner();
         Button retorno = findViewById(R.id.retorno);
         Button calcular = findViewById(R.id.calcular);
+        List<String> finalLista = lista;
         retorno.setOnClickListener(v -> {
-            retornaView(v);
+            retornaView(v, finalLista);
         });
 
         calcular.setOnClickListener(v -> {
@@ -47,8 +55,11 @@ public class activity_calc extends Activity {
 
     }
 
-    public void retornaView(View view){
+    public void retornaView(View view, List<String> lista){
+        Bundle params = new Bundle();
+        params.putStringArrayList("array", (ArrayList<String>) lista);
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtras(params);
         startActivity(intent);
     }
 

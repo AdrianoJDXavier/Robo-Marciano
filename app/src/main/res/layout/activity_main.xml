@@ -24,6 +24,17 @@
         android:orientation="horizontal"
         android:gravity="center">
 
+        <Spinner
+            android:id="@+id/spiner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BA6161"
+            android:backgroundTintMode="add"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:textAlignment="center"
+            android:textSize="40sp"></Spinner>
+
         <EditText
             android:id="@+id/pergunta"
             android:layout_width="match_parent"
